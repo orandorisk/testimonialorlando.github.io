@@ -1,0 +1,150 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eeeeee;
+    font-family: 'Barlow Semi Condensed',
+        sans-serif;
+    padding: 50px 60px 50px 60px;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: "ungu ungu  ungu abu white-r"
+        "white-1 hitam hitam hitam white-r";
+    gap: 37px;
+}
+
+.ungu,
+.abu,
+.white-r,
+.hitam,
+.putih {
+    border-radius: 10px;
+    padding: 30px;
+    display: grid;
+    justify-content: space-between;
+    box-shadow: 5px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ungu {
+    grid-area: ungu;
+    background-color: hsl(263, 56%, 52%);
+    position: relative;
+}
+
+.ungu .bg {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 100px;
+    opacity: 0.5;
+}
+
+.abu {
+    grid-area: abu;
+    background-color: hsl(217, 19%, 35%);
+}
+
+.white-r {
+    grid-area: white-r;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.hitam {
+    grid-area: hitam;
+    background-color: hsl(219, 29%, 14%);
+}
+
+.container .putih {
+    grid-area: white-1;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.container .photos {
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid hsl(0, 0%, 70%);
+}
+
+.container .name,
+.name1 {
+    vertical-align: top;
+    display: inline-block;
+    margin: 0px 15px;
+    letter-spacing: 0.5px;
+}
+
+.container .name1 h5 {
+    color: hsl(219, 29%, 14%);
+    font-weight: 600;
+}
+
+.container .name1 h6 {
+    color: hsl(217, 13%, 68%);
+    font-weight: 570;
+}
+
+.name h5 {
+    color: hsl(0, 0%, 100%);
+    font-weight: 200;
+}
+
+.name h6 {
+    color: hsl(0, 0%, 100%);
+    opacity: 70%;
+    font-weight: 100;
+}
+
+.container h3 {
+    color: hsl(207, 47%, 93%);
+    padding: 20px 0px 20px 0px;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    font-size: 1.3em;
+}
+
+.container .htga {
+    color: hsl(217, 19%, 22%);
+}
+
+.container p {
+    color: hsl(218, 44%, 93%);
+    font-size: 0.9em;
+    line-height: 1.5;
+    letter-spacing: 0.6px;
+    font-weight: 590;
+    opacity: 70%;
+}
+
+.white-r p,
+.putih p {
+    color: hsl(218, 26%, 20%);
+    font-weight: 600;
+    opacity: 70%;
+}
+
+/* RESPONSIVE*/
+@media(max-width:1000px) {
+    body {
+        padding: 40px 24px 40px 24px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-areas: "ungu"
+            "abu"
+            "white-1"
+            "hitam"
+            "white-r";
+        column-gap: 37px;
+    }
+
+    .ungu .bg {
+        right: 20px;
+    }
+}
